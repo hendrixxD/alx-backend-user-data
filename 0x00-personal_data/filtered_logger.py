@@ -48,7 +48,7 @@ def get_logger() -> logging.Logger:
 
 # PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password')
 
-def get_db():
+def get_db() -> mysql.connector.connection.MySQLConnection::
     """
     Return a connector to the holberton database
     """
@@ -61,7 +61,7 @@ def get_db():
                                 host=host, database=database)
     return cnx
 
-def main():
+def main() -> None:
     """
     Retrieve all rows from the users table, obfuscate sensitive information,
     and display the filtered data in the log output
