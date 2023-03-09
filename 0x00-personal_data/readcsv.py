@@ -1,3 +1,7 @@
 import pandas as pd
+import logging as log
+
+log.basicConfig()
+
 df1 = pd.read_csv('user_data.csv')
-print(df1)
+LOG(df1)
