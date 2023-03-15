@@ -11,7 +11,6 @@ Base = declarative_base()
 engine = create_engine('sqlite:///:memory:', echo=True)
 
 
-
 class User(Base):
     """ User model"""
 
