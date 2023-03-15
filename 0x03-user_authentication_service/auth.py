@@ -22,7 +22,6 @@ class Auth:
         """ initializing the DB class """
         self._db = DB()
 
-    
     def register_user(self, email: str, password: str) -> User:
         """ registers a new user """
         try:
@@ -32,7 +31,5 @@ class Auth:
             new_user = self._db.add_user(email=email, hashed_password=hash_pdw)
 
             return new_user
-            
         raise ValueError(f'User {email} already exists')
-        
         return new_user
