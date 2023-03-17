@@ -10,7 +10,6 @@ from typing import TypeVar, Union
 
 U = TypeVar(User)
 
-
 def _hash_password(password: str) -> bytes:
     """ return a hash password """
 
@@ -20,7 +19,7 @@ def _hash_password(password: str) -> bytes:
 
 def _generate_uuid() -> str:
     """ generate uuid and return igts repre"""
-    return str(uuid())
+    return str(uuid.uuid4())
 
 
 class Auth:
