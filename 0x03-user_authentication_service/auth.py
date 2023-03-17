@@ -10,6 +10,7 @@ from typing import TypeVar, Union
 
 U = TypeVar(User)
 
+
 def _hash_password(password: str) -> bytes:
     """ return a hash password """
 
