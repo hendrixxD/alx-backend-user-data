@@ -5,6 +5,9 @@ import bcrypt
 from db import DB
 from user import User
 from sqlalchemy.orm.exc import NoResultFound
+from typing import TypeVar, Union
+
+U = TypeVar(User)
 
 
 def _hash_password(password: str) -> bytes:
@@ -12,6 +15,11 @@ def _hash_password(password: str) -> bytes:
 
     passwd = password.encode()
     return bcrypt.hashpw(passwd, bcrypt.gensalt())
+
+
+def _generate_uuid() -> str:
+    """ generate uuid and return igts repre"""
+    return str(uuid())
 
 
 class Auth:
