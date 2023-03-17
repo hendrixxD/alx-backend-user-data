@@ -51,7 +51,7 @@ class Auth:
         else:
             return bcrypt.checkpw(password.encode(), user.hashed_password)
 
-    def create_session(self, email: str) -> Union[None, str]:
+    def create_session(self, email: str) -> str:
         """creates a session with a new uuid"""
         try:
             user = self._db.find_user_by(email=email)
